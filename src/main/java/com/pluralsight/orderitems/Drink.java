@@ -9,6 +9,21 @@ public class Drink implements Interface {
     public Drink(String size, String drinkSelection) {
         this.size = size;
         this.drinkSelection = drinkSelection;
+
+        switch (size.toLowerCase()) {
+            case "small":
+                double price = 2.0;
+                break;
+            case "medium":
+                price = 2.5;
+                break;
+            case "large":
+                price = 3.0;
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid drink size.");
+
+        }
     }
 
     public String getSize() {

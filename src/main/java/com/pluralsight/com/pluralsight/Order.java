@@ -4,6 +4,7 @@ import com.pluralsight.orderitems.Chips;
 import com.pluralsight.orderitems.Drink;
 import com.pluralsight.orderitems.Sandwich;
 
+import java.util.Date;
 import java.util.List;
 
 public class Order {
@@ -11,12 +12,18 @@ public class Order {
     private List<Drink> drinks;
     private List<Chips> chips;
     private double orderTotal;
+    private Date orderTime;
 
-    public Order(List<Sandwich> sandwichList, List<Drink> drinks, List<Chips> chips, double orderTotal) {
+    public Order(List<Sandwich> sandwichList, List<Drink> drinks, List<Chips> chips, double orderTotal, Date orderTime) {
         this.sandwichList = sandwichList;
         this.drinks = drinks;
         this.chips = chips;
         this.orderTotal = orderTotal;
+        this.orderTime = orderTime;
+
+    }
+
+    public Order() {
 
     }
 
@@ -50,5 +57,31 @@ public class Order {
 
     public void setOrderTotal(double orderTotal) {
         this.orderTotal = orderTotal;
+    }
+
+    public Date getOrderTime() {
+        return orderTime;
+    }
+
+    public void setOrderTime(Date orderTime) {
+        this.orderTime = orderTime;
+    }
+
+    public void addSandwich(Sandwich sandwich) {
+    }
+
+    public void addDrink(Drink drink) {
+    }
+
+    public void addChips(Chips chips) {
+    }
+
+    public void generateReceipt() {
+    }
+
+    public String calculateTotalCost() {
+
+
+        return "";
     }
 }

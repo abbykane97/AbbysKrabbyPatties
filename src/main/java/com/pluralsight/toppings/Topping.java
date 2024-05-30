@@ -1,7 +1,5 @@
 package com.pluralsight.toppings;
 
-import com.pluralsight.com.pluralsight.Interface;
-
 public class Topping  {
     private String name;
     private double price;
@@ -21,7 +19,7 @@ public class Topping  {
         this.name = name;
     }
 
-    public double getPrice() {
+    public double getPrice(int size) {
         return price;
     }
 
