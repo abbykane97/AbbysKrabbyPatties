@@ -1,4 +1,6 @@
 package com.pluralsight.com.pluralsight;
 
-public class Interface {
+public interface Interface {
+
+    double getPrice();
 }
