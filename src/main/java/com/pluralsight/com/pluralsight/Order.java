@@ -79,9 +79,20 @@ public class Order {
     public void generateReceipt() {
     }
 
-    public String calculateTotalCost() {
+    public double calculateTotalCost() {
+        double totalCost = 0;
 
+        for (Sandwich sandwich : sandwichList) {
+            totalCost += sandwich.calculatePrice();
+        }
+        for (Drink drink : drinks) {
+            totalCost += drink.getPrice();
+        }
+        for (Chips chip : chips) {
+            totalCost += chip.getPrice();
+        }
 
-        return "";
+        return totalCost;
+
     }
 }

@@ -68,18 +68,38 @@ public class OrderScreen {
             if (choice == 0) {
                 break;
             }
-            System.out.println("Enter topping name:");
-            String toppingName = scanner.next();
-            System.out.println("Enter topping price:");
-            double toppingPrice = scanner.nextDouble();
-            System.out.println("Is it premium? (true/false):");
-            boolean isPremium = scanner.nextBoolean();
-            if (choice == 1) {
-                sandwich.addTopping(new Meat(toppingName, toppingPrice, isPremium));
-            } else if (choice == 2) {
-                sandwich.addTopping(new Cheese(toppingName, toppingPrice, isPremium));
-            } else {
-                sandwich.addTopping(new Regular(toppingName, toppingPrice, isPremium));
+            switch (choice) {
+                case 1:
+                    System.out.println("Meat options:");
+                    List<Meat> meats = Meat.generateMeats();
+                    for (int i = 0; i < meats.size(); i++) {
+                        System.out.println((i+1) + "." + meats.get(i).getName());
+                    }
+                    int meatChoice = scanner.nextInt();
+                    sandwich.addTopping(meats.get(meatChoice - 1));
+                    break;
+
+                case 2:
+                    System.out.println("Cheese options:");
+                    List<Cheese> cheeses = Cheese.generateCheeses();
+                    for (int i = 0; i < cheeses.size(); i++) {
+                        System.out.println((i+1) + "." + cheeses.get(i).getName());
+                    }
+                    int cheeseChoice = scanner.nextInt();
+                    sandwich.addTopping(cheeses.get(cheeseChoice - 1));
+                    break;
+
+                case 3:
+                    System.out.println("Regular Topping options:");
+                    List<Regular> regulars = Regular.generateRegularToppings();
+                    for (int i = 0; i < regulars.size(); i++) {
+                        System.out.println((i+1) + "." + regulars.get(i).getName());
+                    }
+                    int regulaChoice = scanner.nextInt();
+                    sandwich.addTopping(regulars.get(regulaChoice - 1));
+                    break;
+
+
             }
         }
 
