@@ -15,8 +15,8 @@ public class OrderScreen {
     private OrderManager orderManager;
 
     public OrderScreen() {
-        this.scanner = scanner;
-        this.orderManager = orderManager;
+        this.scanner = new Scanner(System.in);
+        this.orderManager = new OrderManager();
     }
     public void show() {
         Order order = new Order();
