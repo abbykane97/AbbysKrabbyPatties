@@ -72,12 +72,15 @@ public class Order {
     }
 
     public void addSandwich(Sandwich sandwich) {
+        sandwichList.add(sandwich);
     }
 
     public void addDrink(Drink drink) {
+        drinks.add(drink);
     }
 
-    public void addChips(Chips chips) {
+    public void addChips(Chips chip) {
+        chips.add(chip);
     }
 
     public void generateReceipt() {

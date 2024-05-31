@@ -20,6 +20,7 @@ public class OrderScreen {
     }
     public void show() {
         Order order = new Order();
+
         while (true) {
             System.out.println("Order Screen:");
             System.out.println("1. Add Sandwich");
@@ -27,6 +28,7 @@ public class OrderScreen {
             System.out.println("3. Add Chips");
             System.out.println("4. Checkout");
             System.out.println("0. Cancel Order");
+
             int choice = scanner.nextInt();
 
             switch (choice) {
@@ -45,13 +47,17 @@ public class OrderScreen {
                     ReceiptManager receiptManager = new ReceiptManager();
                     receiptManager.generateReceipt(order);
                     System.out.println("Order completed. Your total cost is: $" + order.calculateTotalCost());
-                    break;
+                    return;
                 case 0:
                     System.out.println("Order cancelled");
                     return;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+                    break;
             }
         }
     }
+
     private Sandwich createSandwich() {
         System.out.println("Enter bread type:");
         String breadType = scanner.next();
@@ -70,40 +76,51 @@ public class OrderScreen {
             }
             switch (choice) {
                 case 1:
-                    System.out.println("Meat options:");
-                    List<Meat> meats = Meat.generateMeats();
-                    for (int i = 0; i < meats.size(); i++) {
-                        System.out.println((i+1) + "." + meats.get(i).getName());
-                    }
-                    int meatChoice = scanner.nextInt();
-                    sandwich.addTopping(meats.get(meatChoice - 1));
+                    addMeatTopping(sandwich);
                     break;
-
                 case 2:
-                    System.out.println("Cheese options:");
-                    List<Cheese> cheeses = Cheese.generateCheeses();
-                    for (int i = 0; i < cheeses.size(); i++) {
-                        System.out.println((i+1) + "." + cheeses.get(i).getName());
-                    }
-                    int cheeseChoice = scanner.nextInt();
-                    sandwich.addTopping(cheeses.get(cheeseChoice - 1));
+                    addCheeseTopping(sandwich);
                     break;
-
                 case 3:
-                    System.out.println("Regular Topping options:");
-                    List<Regular> regulars = Regular.generateRegularToppings();
-                    for (int i = 0; i < regulars.size(); i++) {
-                        System.out.println((i+1) + "." + regulars.get(i).getName());
-                    }
-                    int regulaChoice = scanner.nextInt();
-                    sandwich.addTopping(regulars.get(regulaChoice - 1));
+                    addRegularTopping(sandwich);
                     break;
-
-
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+                    break;
             }
         }
 
         return sandwich;
+    }
+
+    private void addMeatTopping(Sandwich sandwich) {
+        System.out.println("Meat options:");
+        List<Meat> meats = Meat.generateMeats();
+        for (int i = 0; i < meats.size(); i++) {
+            System.out.println((i + 1) + "." + meats.get(i).getName());
+        }
+        int meatChoice = scanner.nextInt();
+        sandwich.addTopping(meats.get(meatChoice - 1));
+    }
+
+    private void addCheeseTopping(Sandwich sandwich) {
+        System.out.println("Cheese options:");
+        List<Cheese> cheeses = Cheese.generateCheeses();
+        for (int i = 0; i < cheeses.size(); i++) {
+            System.out.println((i + 1) + "." + cheeses.get(i).getName());
+        }
+        int cheeseChoice = scanner.nextInt();
+        sandwich.addTopping(cheeses.get(cheeseChoice - 1));
+    }
+
+    private void addRegularTopping(Sandwich sandwich) {
+        System.out.println("Regular Topping options:");
+        List<Regular> regulars = Regular.generateRegularToppings();
+        for (int i = 0; i < regulars.size(); i++) {
+            System.out.println((i + 1) + "." + regulars.get(i).getName());
+        }
+        int regularChoice = scanner.nextInt();
+        sandwich.addTopping(regulars.get(regularChoice - 1));
     }
 
     private Drink createDrink() {

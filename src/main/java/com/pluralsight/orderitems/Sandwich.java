@@ -66,7 +66,7 @@ public class Sandwich implements Interface {
 
 
     public double calculatePrice() {
-        double basePrice = 0;
+        double basePrice;
 
         switch (size) {
 
@@ -94,14 +94,10 @@ public class Sandwich implements Interface {
             return calculatePrice();
         }
 
-    public void addTopping(Meat meat) {
-    }
+        public void addTopping(Topping topping) {
+        toppings.add(topping);
+        }
 
-    public void addTopping(Regular regular) {
-    }
-
-    public void addTopping(Cheese cheese) {
-    }
 }
 
 
