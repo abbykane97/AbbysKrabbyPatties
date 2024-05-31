@@ -1,6 +1,5 @@
 package com.pluralsight.orderitems;
 
-import com.pluralsight.com.pluralsight.Interface;
 import com.pluralsight.toppings.Cheese;
 import com.pluralsight.toppings.Meat;
 import com.pluralsight.toppings.Regular;
@@ -92,7 +91,7 @@ public class Sandwich implements Interface {
 
         @Override
         public double getPrice () {
-            return 0;
+            return calculatePrice();
         }
 
     public void addTopping(Meat meat) {

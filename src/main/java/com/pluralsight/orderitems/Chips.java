@@ -1,12 +1,12 @@
 package com.pluralsight.orderitems;
 
-import com.pluralsight.com.pluralsight.Interface;
-
 public class Chips implements Interface {
     private String chipSelection;
+    private double price;
 
     public Chips(String chipSelection) {
         this.chipSelection = chipSelection;
+        this.price = price;
     }
 
     public String getChipSelection() {
@@ -19,6 +19,6 @@ public class Chips implements Interface {
 
     @Override
     public double getPrice() {
-        return 0;
+        return price;
     }
 }

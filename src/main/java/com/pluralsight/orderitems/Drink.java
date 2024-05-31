@@ -1,18 +1,18 @@
 package com.pluralsight.orderitems;
 
-import com.pluralsight.com.pluralsight.Interface;
-
 public class Drink implements Interface {
     private String size;
     private String drinkSelection;
+    private double price;
 
     public Drink(String size, String drinkSelection) {
         this.size = size;
         this.drinkSelection = drinkSelection;
+        this.price = price;
 
         switch (size.toLowerCase()) {
             case "small":
-                double price = 2.0;
+                price = 2.0;
                 break;
             case "medium":
                 price = 2.5;
@@ -44,6 +44,6 @@ public class Drink implements Interface {
 
     @Override
     public double getPrice() {
-        return 0;
+        return price;
     }
 }

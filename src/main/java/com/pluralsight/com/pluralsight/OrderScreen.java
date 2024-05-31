@@ -41,14 +41,14 @@ public class OrderScreen {
                     break;
                 case 4:
                     orderManager.addOrder(order);
-                    orderManager.addOrder(order);
-                    order.generateReceipt();
+                    order.setOrderTotal(order.calculateTotalCost());
+                    ReceiptManager receiptManager = new ReceiptManager();
+                    receiptManager.generateReceipt(order);
                     System.out.println("Order completed. Your total cost is: $" + order.calculateTotalCost());
-                    return;
+                    break;
                 case 0:
                     System.out.println("Order cancelled");
-
-
+                    return;
             }
         }
     }

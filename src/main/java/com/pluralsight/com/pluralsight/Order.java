@@ -4,6 +4,7 @@ import com.pluralsight.orderitems.Chips;
 import com.pluralsight.orderitems.Drink;
 import com.pluralsight.orderitems.Sandwich;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -24,6 +25,9 @@ public class Order {
     }
 
     public Order() {
+        this.sandwichList = new ArrayList<>();
+        this.drinks = new ArrayList<>();
+        this.chips = new ArrayList<>();
 
     }
 
@@ -91,8 +95,9 @@ public class Order {
         for (Chips chip : chips) {
             totalCost += chip.getPrice();
         }
+        this.orderTotal = totalCost;
 
         return totalCost;
 
     }
-}
+    }

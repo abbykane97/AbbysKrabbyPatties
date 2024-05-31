@@ -1,4 +1,4 @@
-package com.pluralsight.com.pluralsight;
+package com.pluralsight.orderitems;
 
 public interface Interface {
 
