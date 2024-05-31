@@ -71,6 +71,7 @@ OpenJDK 64-Bit Server VM Corretto-17.0.10.7.1 (build 17.0.10+7-LTS, mixed mode, 
 - Any additional libraries or frameworks used in the project.
 
 ## Demo
+![Screenshot 2024-05-31 at 9.26.53 AM.png](..%2F..%2F..%2F..%2F..%2F..%2F..%2FScreenshot%202024-05-31%20at%209.26.53%E2%80%AFAM.png)
 
 Include screenshots or GIFs that show your application in action. Use tools like [Giphy Capture](https://giphy.com/apps/giphycapture) to record a GIF of your application.
 
@@ -86,7 +87,7 @@ Outline potential future enhancements or functionalities you might consider addi
 ## Resources
 
 List resources such as tutorials, articles, or documentation that helped you during the project.
-
+![Screenshot 2024-05-31 at 9.26.53 AM.png](..%2F..%2F..%2F..%2F..%2F..%2F..%2FScreenshot%202024-05-31%20at%209.26.53%E2%80%AFAM.png)
 - [Java Programming Tutorial](https://www.example.com)
 - [Effective Java](https://www.example.com)
 
