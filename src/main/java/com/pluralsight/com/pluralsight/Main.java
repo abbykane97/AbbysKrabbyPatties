@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        OrderManager orderManager = new OrderManager();
 
         System.out.println("Welcome to Abby's Krabby Patties!");
         System.out.println("1. New Order");

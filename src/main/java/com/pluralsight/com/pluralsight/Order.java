@@ -35,24 +35,15 @@ public class Order {
         return sandwichList;
     }
 
-    public void setSandwichList(List<Sandwich> sandwichList) {
-        this.sandwichList = sandwichList;
+    {
     }
 
     public List<Drink> getDrinks() {
         return drinks;
     }
 
-    public void setDrinks(List<Drink> drinks) {
-        this.drinks = drinks;
-    }
-
     public List<Chips> getChips() {
         return chips;
-    }
-
-    public void setChips(List<Chips> chips) {
-        this.chips = chips;
     }
 
     public double getOrderTotal() {
@@ -62,13 +53,7 @@ public class Order {
     public void setOrderTotal(double orderTotal) {
         this.orderTotal = orderTotal;
     }
-
-    public Date getOrderTime() {
-        return orderTime;
-    }
-
-    public void setOrderTime(Date orderTime) {
-        this.orderTime = orderTime;
+    {
     }
 
     public void addSandwich(Sandwich sandwich) {
@@ -81,9 +66,6 @@ public class Order {
 
     public void addChips(Chips chip) {
         chips.add(chip);
-    }
-
-    public void generateReceipt() {
     }
 
     public double calculateTotalCost() {

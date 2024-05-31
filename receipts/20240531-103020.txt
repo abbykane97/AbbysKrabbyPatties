@@ -1,0 +1,9 @@
+Order Time: 20240531-103020
+----------
+Sandwiches:
+-white-$5.5
+Drinks:
+Chips:
+- doritos - $0.0
+--------------
+Total Cost: $5.5

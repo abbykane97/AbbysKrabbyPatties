@@ -1,0 +1,9 @@
+Order Time: 20240531-102808
+----------
+Sandwiches:
+-white-$8.75
+Drinks:
+Chips:
+- lays - $0.0
+--------------
+Total Cost: $8.75
